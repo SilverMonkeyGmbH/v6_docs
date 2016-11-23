@@ -103,17 +103,10 @@ Configure IIS
 Create IIS App Pool
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Go to IIS Manager and create an AppPool with .NET CLR version set to ``No Managed Code`` :
+1. Go to IIS Manager and create an AppPool with .NET CLR version set to `v4.0*`` :
 
 .. image:: _static/install/IISAppPool.png
 
-2. Go into the Advanced Settings of this AppPool and change the ``Process Model - Identity`` : 
-
-.. image:: _static/install/IISAppPoolAdvancedSettings-1.png
-
-3. Make sure to use a custom **Active Directory** user account, i.e. the  Service Account (``sim-svc-sql``) which has db_owner rights in the SIM v61 SQL database. This account is only used for accessing the own SQL database. Syntax: ``DOMAIN\UserName``.
-
-.. image:: _static/install/IISAppPoolAdvancedSettings-2.png
 
 Create SilverMonkey folder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -121,31 +114,28 @@ Create SilverMonkey folder
 #. Create C:\\SilverMonkey
 #. Copy files from installation media to **C:\\SilverMonkey\\v60\\**
 
-
 Create IIS Application
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Go to IIS Manager, DefaultWebSite (or other Website, make sure to disable Impersonation). Impersonation is not supported for v61 and must not be inherited from Default Website to IIS application.
-
-.. image:: _static/install/DefaultWebsiteAuth.png
-
-2. Add application, choose SIM AppPool (created above) and target to C:\\SilverMonkey\\v60\\Web\\R001. 
+1. Add application (e.g. to DefaultWebSite), choose SIM AppPool (created above) and target to C:\\SilverMonkey\\v60\\Web\\R001. 
 
 .. hint:: The alias defines the later URL: http://HOSTNAME/ALIAS
 
 .. image:: _static/install/IISApplicationCreate.png
 
+2. Change value ``databaseConnectionString`` to SIM v60 DB in file **C:\\SilverMonkey\\v60\\R001\\Web.Config**
 
 Install Windows Service
 -------------------------
 
 1. Go to C:\\SilverMonkey\\v60\\WinService
-2. Execute **Install.cmd** with administrative rights
-3. Open services.msc and make sure that the Windows Service **SIMv60Service** is installed
+2. Change value ``databaseConnectionString`` to SIM v60 DB in file **C:\\SilverMonkey\\v60\\WinService\\SilverMonkeyService.exe.config**
+3. Execute **Install.cmd** with administrative rights
+4. Open services.msc and make sure that the Windows Service **SIMv60Service** is installed
 
 .. image:: _static/install/SimWinService_01.png
 
-4. Go into the properties of this service and change the Log On Account to the Service Account. This service account is used for the execution of every plugin run by the web service.
+5. Go into the properties of this service and change the Log On Account to the Service Account. This service account is used for the execution of every plugin run by the web service.
 
 .. image:: _static/install/SimWinService_02.png
 
