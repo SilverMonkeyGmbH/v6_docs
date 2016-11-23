@@ -86,7 +86,7 @@ Afterwards, navigate to the SQL Server Services and restart the 'SQL Server ([Da
 SIM SQL DB Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Create database ``SIM_v61_R001``
+1. Create database ``SIM_v60_R001``
 2. Grant SilverMonkey Service Account (``sim-svc-sql``) "db_owner" rights for the corresponding database
 
 .. image:: _static/install/SQLUserMapping.png
@@ -119,8 +119,7 @@ Create SilverMonkey folder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Create C:\\SilverMonkey
-#. Copy files from installation media
-#. Change connection string in file **C:\\SilverMonkey\\v61\\Config.xml** (XPath: //Configuration/DBConnection)
+#. Copy files from installation media to **C:\\SilverMonkey\\v60\\**
 
 
 Create IIS Application
@@ -130,7 +129,7 @@ Create IIS Application
 
 .. image:: _static/install/DefaultWebsiteAuth.png
 
-2. Add application, choose SIM AppPool (created above) and target to C:\\SilverMonkey\\Web\\R001. 
+2. Add application, choose SIM AppPool (created above) and target to C:\\SilverMonkey\\v60\\Web\\R001. 
 
 .. hint:: The alias defines the later URL: http://HOSTNAME/ALIAS
 
@@ -140,9 +139,9 @@ Create IIS Application
 Install Windows Service
 -------------------------
 
-1. Go to C:\\SilverMonkey\\v61\\WinService
+1. Go to C:\\SilverMonkey\\v60\\WinService
 2. Execute **Install.cmd** with administrative rights
-3. Open services.msc and make sure that the Windows Service **SIMv61Service** is installed
+3. Open services.msc and make sure that the Windows Service **SIMv60Service** is installed
 
 .. image:: _static/install/SimWinService_01.png
 
@@ -154,36 +153,3 @@ Install Windows Service
 Test Installation
 ----------------------------------------
 
-.. note:: For testing API download Postman: https://www.getpostman.com/ 
-
-Test Query
-^^^^^^^^^^^^^^^^^^
-
-#. Start Postman
-#. Select **GET** as option
-#. Enter URL: http://SERVERNAME/APP_NAME/api/query?uniquename=TestQuery
-#. Hit execute
-
-The following result should appear:
-
-.. image:: _static/install/APITestQuery.png
-
-Test Queue
-^^^^^^^^^^^^^^^^^^
-
-#. Start Postman
-#. Select **POST** as option
-#. Enter URL: http://SERVERNAME/APP_NAME/api/Queue
-#. Add following code to body:
-
-.. code-block:: xml
-
-    {"definition": "<Definition><Plugin>TestPlugin</Plugin><Data><ExampleString>HelloWorld</ExampleString></Data></Definition>"}
-
-5. Hit execute
-
-The following result should appear:
-
-.. image:: _static/install/APITestQueue.png
-
-.. image:: _static/install/APITestQueuePluginResult.png

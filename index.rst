@@ -1,4 +1,4 @@
-Silver Monkey v6.1 Documentation
+Silver Monkey v6.0 Documentation
 ==============================
 
 .. note:: Documentation is still in development process. Please do not hesitate to contact us on support@silvermonkey.net for further information.
@@ -16,7 +16,7 @@ Contents:
 
    Requirements
    Installation
-   Manual/index
+   --Manual/index
    Changelog
    SupportedConf
    Support

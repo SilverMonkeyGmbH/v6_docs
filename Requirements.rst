@@ -5,19 +5,11 @@ Application Server (IIS)
 ----------------------------
 -	Microsoft Windows Server 2012 or higher
 -	Internet Information Server
--	Microsoft .NET Core 1.0
 - Microsoft .NET Framework 4.6.1
-  
+
   - https://support.microsoft.com/en-us/kb/3102436
   - With Windows Server 2012, the installation requires Windows Update KB2919355, which may be included in your update stream
   - If not already included, please install manually as described here: https://support.microsoft.com/en-us/kb/2919355
-
-Install the .NET Core Windows Server Hosting bundle
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-#. Install the `.NET Core Windows Server Hosting <https://go.microsoft.com/fwlink/?LinkID=827547>`__ bundle on the server. The bundle will install the .NET Core Runtime, .NET Core Library, and the ASP.NET Core Module. The module creates the reverse-proxy between IIS and the Kestrel server.
-#. Restart the server or execute **net stop was /y** followed by **net start w3svc** from the command-line to pickup changes to the system PATH.
-
 
 
 Database Server (SQL)
@@ -47,7 +39,7 @@ In addition to the requirements of the operating system, the following condition
 
 Workplace Systems
 ----------------------------
--	Microsoft Internet Explorer 8 or higher
+-	Microsoft Internet Explorer 10 or higher
 -	Mozilla FireFox 5 or higher (Windows SSO is not supported by browser)
 -	Google Chrome
 

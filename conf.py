@@ -50,7 +50,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'SIM v6.1'
+project = 'SIM v6.0'
 copyright = str(datetime.date.today().year) + ', Silver Monkey GmbH'
 author = 'Silver Monkey'
 
@@ -223,7 +223,7 @@ html_last_updated_fmt = '%b %d, %Y'
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'simv61doc'
+htmlhelp_basename = 'simv60doc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
