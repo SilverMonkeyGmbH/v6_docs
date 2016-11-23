@@ -1,0 +1,19 @@
+Loaded assembly: ConfigMgr, Version=6.1.0.6, Culture=neutral, PublicKeyToken=null
++ Ok | Starting Workflow for creating computer... (ComputerOverwriteExistingObject: True) | 11/18/2016 9:19:10 AM
+++ Ok | Connecting to ConfigMgr Site with connection settings: Hostname: "192.168.42.193" SiteCode: "P01" UserName: "administrator" UserDomainName: "SCCM12". | 11/18/2016 9:19:10 AM
++++ Ok | Connected to scope (Path: \\192.168.42.193\root\SMS\site_P01). | 11/18/2016 9:19:11 AM
++++ Ok | Connecting to ConfigMgr SQL database "Data Source= 192.168.42.193; Initial Catalog= CM_P01;" | 11/18/2016 9:19:11 AM
+++ Ok | Validating Computers.Settings... | 11/18/2016 9:19:11 AM
++++ Ok | Valiation ok! | 11/18/2016 9:19:11 AM
+++ ElementFound | Checking if computer already exists (1: SMBIOSGUID: "" / 2. MacAddress: "E4:F8:9C:5D:DE:39" / 3. NetBiosname: TestComputer4")... | 11/18/2016 9:19:11 AM
++++ ElementFound | Executing "SELECT System_MAC_Addres_ARR.ItemKey FROM System_MAC_Addres_ARR JOIN v_R_System ON v_R_System.ResourceId = System_MAC_Addres_ARR.ItemKey WHERE System_MAC_Addres_ARR.[MAC_Addresses0] = 'E4:F8:9C:5D:DE:39' ORDER BY v_R_System.Creation_Date0 DESC" | 11/18/2016 9:19:11 AM
++++ Ok | Computer was found (ResourceId: "16777736"). | 11/18/2016 9:19:11 AM
+++ Ok | Deleting computer with ResourceID "16777736"... | 11/18/2016 9:19:11 AM
+++ Ok | Creating computer... (NetbiosName = TestComputer4, MACAddress = E4:F8:9C:5D:DE:39, SMBIOSGUID = ) | 11/18/2016 9:19:11 AM
++++ Ok | Computer was created with ResourceId: '16777737' | 11/18/2016 9:19:11 AM
+++ Ok | Adding variables to resouce with ResourceID "16777737"... (Variable count: 1) | 11/18/2016 9:19:11 AM
++++ Ok | Adding "Var1" (Value: "Val1222")... | 11/18/2016 9:19:11 AM
++++ Ok | Done! | 11/18/2016 9:19:12 AM
+++ Ok | Starting AddCollectionMembership...(CollectionId: "P01000A2", CollectionName: "Windows Server 2012 Deploy", ResourceName: "TestComputer4", ResourceId: "16777737", CreateCollectionIfNotExist: "False", IsComputerMembership: "True") | 11/18/2016 9:19:12 AM
++++ Ok | Validating CollectionMembershipParameters... | 11/18/2016 9:19:12 AM
++++ Ok | Done! | 11/18/2016 9:19:12 AM
