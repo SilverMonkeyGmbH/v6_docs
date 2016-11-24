@@ -121,7 +121,9 @@ Create IIS Application
 
 .. hint:: The alias defines the later URL: http://HOSTNAME/ALIAS
 
-.. image:: _static/install/IISApplicationCreate.png
+.. image:: _static/install/IISApplicationCreate1.png
+
+.. image:: _static/install/IISApplicationCreate2.png
 
 2. Change value ``databaseConnectionString`` to SIM v60 DB in file **C:\\SilverMonkey\\v60\\R001\\Web.Config**
 
