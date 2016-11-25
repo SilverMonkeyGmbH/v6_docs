@@ -137,10 +137,6 @@ Install Windows Service
 
 .. image:: _static/install/SimWinService_01.png
 
-5. Go into the properties of this service and change the Log On Account to the Service Account. This service account is used for the execution of every plugin run by the web service.
-
-.. image:: _static/install/SimWinService_02.png
-
 
 Test Installation
 ----------------------------------------
