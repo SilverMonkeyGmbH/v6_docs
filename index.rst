@@ -16,7 +16,7 @@ Contents:
 
    Requirements
    Installation
-   --Manual/index
+   Manual/index
    Changelog
    SupportedConf
    Support
