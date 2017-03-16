@@ -8,9 +8,16 @@ Modules:
 
    Webservice/index
 
-Plugins:
+.. Plugins:
 
-.. toctree::
+.. .. toctree::
    :maxdepth: 0
 
-   -Plugins/ConfigMgr/index
+ .. Plugins/ConfigMgr/index
+
+Forms:
+
+.. toctree::
+    :maxdepth: 0
+
+    Forms/index
