@@ -6,8 +6,6 @@ Data
 
 All data which is used on the page is inserted via sql-statement. 
 
-Example
-^^^^^^^^
 
   ..code-block::
  
