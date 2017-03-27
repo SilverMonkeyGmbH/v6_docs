@@ -262,6 +262,7 @@ Represents a splitter control that enables the user to resize docked controls.
 Functionbar
 ----------------
 
+
 The bar simply lists all the function definitions inside the file.  
 The pattern matching used to generate the function list.
 
