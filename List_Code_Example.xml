@@ -1,0 +1,8 @@
+<List Id="List" Command="LoadFrame('EditItem', 'View.aspx?ViewId=60104&amp;Id='+strId, strDirection);" Add="LoadFrame('EditItem', 'View.aspx?ViewId=60104&amp;Id=-2', 'down');">
+          <ListItem>
+            <div class="Content">
+              <div class="Title">{DisplayName}</div>
+              <div class="Text">-</div>
+            </div>
+          </ListItem>
+        </List>

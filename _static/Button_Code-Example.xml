@@ -1,0 +1,1 @@
+ <Button Id="Save" Function="Save" Class="ButtonText" Image="Save16.png" AfterSaveScript="" AfterCreateScript="window.parent.RefreshList('datensatzID'); document.location.href='selfParamLink mit ID';" />

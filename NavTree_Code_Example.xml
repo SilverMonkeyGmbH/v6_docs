@@ -1,0 +1,1 @@
+<NavTree Table="ShopCategory" OrderBy="SortOrder" Filter="" SelectedId="{?CategoryId}" Script="document.location.href='View.aspx?ViewId=20030&amp;NoHeaderAnimation=1&amp;CategoryId={Id}';" />

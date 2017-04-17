@@ -1,0 +1,6 @@
+<ButtonMore>
+            <MenuItem Icon="" Function="Delete" AfterDeleteScript="window.parent.RefreshList(); $('form').html('');">
+              <Title Lang="DE">Löschen</Title>
+            </MenuItem>
+            <OpenInNewWindow />
+          </ButtonMore>

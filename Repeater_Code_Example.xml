@@ -1,0 +1,11 @@
+ <Repeater Id="Products" Source="Products" PageSize="16">
+          <div class="ShopProduct" Style="cursor:default; color:#404040;">
+            <div class="ShopProductImage" Style="opacity:1;">
+              <img src="{EnsureFile:.\Cache\Table\{GUID}_Image1.png;Image1;./Resource/Images/MissingProductImage.png}" />
+            </div>
+            <div class="ShopProductTitle">
+              <div class="Title">{DisplayName}</div>
+              <Span>{ItemName}</Span>
+            </div>
+          </div>
+        </Repeater>

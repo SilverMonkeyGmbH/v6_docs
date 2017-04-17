@@ -1,0 +1,10 @@
+<list type="bullet" | "number" | "table">  
+    <listheader>  
+        <term>term</term>  
+        <description>description</description>  
+    </listheader>  
+    <item>  
+        <term>term</term>  
+        <description>description</description>  
+    </item>  
+</list>  

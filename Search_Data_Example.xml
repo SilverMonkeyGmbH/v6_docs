@@ -1,0 +1,3 @@
+  <Div Class="RepeaterSearch">
+        <Search Id="Products" Script="ProductsRefresh();" />
+      </Div>
