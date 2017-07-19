@@ -9,7 +9,7 @@ Installation
 Requirements
 ----------------------------
 #. For general information on system requirements see :doc:`/Requirements`.
-#. Microsoft Active Directory Service Account for accessing SIM SQL DB (in this article ``sim-svc-sql``)
+#. SQL Service Account for accessing SIM SQL DB (in this article ``sim-svc-sql``)
 
 .. important:: Please install all requirements before beginning with this guide! 
 
